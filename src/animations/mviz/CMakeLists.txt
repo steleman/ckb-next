@@ -39,7 +39,7 @@ if (USE_PORTAUDIO)
     set_target_properties(mviz PROPERTIES COMPILE_DEFINITIONS "USE_PORTAUDIO=1")
 
     if (LINUX)
-        set(AUDIO_LIBRARIES portaudio)
+        set(AUDIO_LIBRARIES pulse portaudio)
         set(PORTAUDIO_INCLUDE_DIRS "/usr/include/")
     elseif (MACOS)
         find_library(CORESERVICES_LIBRARY CoreServices)
